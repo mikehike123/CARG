@@ -171,7 +171,7 @@ def main():
     treasury_pct = 0.70  # 90% in treasury
     treasury_yield = 0.045  # 4% annual yield
     tqqq_ticker = 'spy'
-    rebalance = 'both'
+    rebalance_flag = 'both'
     
     # Define time period (10 years)
     end_date = datetime.now().strftime('%Y-%m-%d')
@@ -179,7 +179,7 @@ def main():
     
     # Run simulation
     yearly_results, cagr, std_dev, portfolio_values, max_drawdown = simulate_mixed_portfolio(
-        initial_capital, treasury_pct, treasury_yield, tqqq_ticker, start_date, end_date, 'both'
+        initial_capital, treasury_pct, treasury_yield, tqqq_ticker, start_date, end_date, rebalance_flag
     )
 
     # Print results
